@@ -3,6 +3,7 @@ node_modules
 out
 .env*
 .DS_Store
+desktop.ini
 .netlify
 next-env.d.ts
 *.tsbuildinfo

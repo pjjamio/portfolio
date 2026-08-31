@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { profile, skills } from "@/data/resume";
 
@@ -5,6 +6,14 @@ export default function Hero() {
   const [first, ...rest] = profile.name.split(" ");
   return (
     <section className="mx-auto flex max-w-5xl flex-col items-center px-6 py-24 text-center sm:py-32">
+      <Image
+        src="/paul-john-jamio.jpg"
+        alt={profile.name}
+        width={160}
+        height={160}
+        priority
+        className="mb-8 h-40 w-40 rounded-full border border-line object-cover object-top"
+      />
       <h1 className="text-4xl font-bold tracking-tight text-neutral-100 sm:text-6xl">
         {first} <span className="text-accent">{rest.join(" ")}</span>
       </h1>

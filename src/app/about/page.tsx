@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { education, experience, profile, skills } from "@/data/resume";
 
 export const metadata: Metadata = {
@@ -10,7 +11,16 @@ export default function AboutPage() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-20">
       <h1 className="text-3xl font-bold tracking-tight text-neutral-100 sm:text-4xl">About</h1>
-      <p className="mt-6 leading-relaxed text-neutral-400">{profile.summary}</p>
+      <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-start">
+        <Image
+          src="/paul-john-jamio.jpg"
+          alt={profile.name}
+          width={140}
+          height={140}
+          className="h-[140px] w-[140px] shrink-0 rounded-xl border border-line object-cover object-top"
+        />
+        <p className="leading-relaxed text-neutral-400">{profile.summary}</p>
+      </div>
 
       <div className="mt-10 flex flex-wrap gap-2">
         {skills.map((s) => (
