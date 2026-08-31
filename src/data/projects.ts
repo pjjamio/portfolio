@@ -12,6 +12,27 @@ export function shot(url: string): string {
 
 export const projects: Project[] = [
   {
+    name: "PathFactory",
+    url: "https://www.pathfactory.com/",
+    stack: ["WordPress", "Custom Theme", "ACF"],
+    description:
+      "Developed a personalized theme with ACF for a fast-moving B2B marketing team to manage campaigns and resources.",
+  },
+  {
+    name: "Duuo Insurance",
+    url: "https://duuo.ca/",
+    stack: ["WordPress", "Custom Theme", "ACF"],
+    description:
+      "Personalized theme with Advanced Custom Fields powering product and coverage pages. Ongoing content updates and security.",
+  },
+  {
+    name: "Influitive",
+    url: "https://influitive.com/",
+    stack: ["WordPress", "Custom Theme", "ACF"],
+    description:
+      "Custom theme and ACF content model for an advocacy-marketing platform's website. Plugin updates and security hardening.",
+  },
+  {
     name: "ILM Corporation",
     url: "https://www.ilmcorp.com/",
     stack: ["WordPress", "Elementor"],
@@ -40,41 +61,6 @@ export const projects: Project[] = [
       "Custom law-firm theme with ACF-driven content blocks for practice areas and attorney profiles. Ongoing maintenance and security.",
   },
   {
-    name: "Freedom Solutions",
-    url: "https://getfreedom.solutions/",
-    stack: ["WordPress", "Custom Theme", "ACF"],
-    description:
-      "Company site built on a personalized theme with Advanced Custom Fields for flexible content editing. Full content, plugin, and security management.",
-  },
-  {
-    name: "PathFactory",
-    url: "https://www.pathfactory.com/",
-    stack: ["WordPress", "Custom Theme", "ACF"],
-    description:
-      "Developed a personalized theme with ACF for a fast-moving B2B marketing team to manage campaigns and resources.",
-  },
-  {
-    name: "Duuo Insurance",
-    url: "https://duuo.ca/",
-    stack: ["WordPress", "Custom Theme", "ACF"],
-    description:
-      "Personalized theme with Advanced Custom Fields powering product and coverage pages. Ongoing content updates and security.",
-  },
-  {
-    name: "Influitive",
-    url: "https://influitive.com/",
-    stack: ["WordPress", "Custom Theme", "ACF"],
-    description:
-      "Custom theme and ACF content model for an advocacy-marketing platform's website. Plugin updates and security hardening.",
-  },
-  {
-    name: "TaxLeopard",
-    url: "https://gigtax.io/",
-    stack: ["WordPress", "Elementor", "ACF"],
-    description:
-      "Built the site with an Elementor theme extended by Advanced Custom Fields for structured content. Ongoing maintenance and security.",
-  },
-  {
     name: "Nervous Waters",
     url: "https://www.nervouswaters.com/",
     stack: ["WordPress", "Custom Theme", "ACF"],
@@ -87,13 +73,6 @@ export const projects: Project[] = [
     stack: ["WordPress", "Custom Theme", "ACF"],
     description:
       "Custom rental-company theme with ACF-managed fleet listings and location pages. Ongoing updates and security.",
-  },
-  {
-    name: "Viscarra Law",
-    url: "https://www.viscarralaw.com/",
-    stack: ["WordPress", "Custom Theme", "ACF"],
-    description:
-      "Personalized law-firm theme with Advanced Custom Fields for editable practice areas and testimonials. Full maintenance and security.",
   },
   {
     name: "Sarfati Law",

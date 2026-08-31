@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 import { education, experience, profile, skills } from "@/data/resume";
 
 export const metadata: Metadata = {
@@ -33,10 +34,11 @@ export default function AboutPage() {
         ))}
       </div>
 
-      <h2 className="mt-16 text-xl font-semibold text-neutral-100">Experience</h2>
+      <Reveal className="mt-16">
+      <h2 className="text-xl font-semibold text-neutral-100">Experience</h2>
       <div className="mt-6 space-y-10">
         {experience.map((job) => (
-          <div key={job.company}>
+          <div key={job.company} className="border-l-2 border-line pl-5 transition-colors hover:border-accent/60">
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
               <p className="font-medium text-neutral-100">
                 {job.title} · {job.company}
@@ -52,8 +54,10 @@ export default function AboutPage() {
           </div>
         ))}
       </div>
+      </Reveal>
 
-      <h2 className="mt-16 text-xl font-semibold text-neutral-100">Education</h2>
+      <Reveal className="mt-16">
+      <h2 className="text-xl font-semibold text-neutral-100">Education</h2>
       <div className="mt-6">
         <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
           <p className="font-medium text-neutral-100">{education.school}</p>
@@ -62,8 +66,9 @@ export default function AboutPage() {
         <p className="text-sm text-neutral-500">{education.location}</p>
         <p className="mt-2 text-sm text-neutral-400">{education.degree}</p>
       </div>
+      </Reveal>
 
-      <div className="mt-16 rounded-xl border border-line bg-surface p-6 text-sm text-neutral-400">
+      <div className="mt-16 rounded-xl border border-line bg-surface p-6 text-sm text-neutral-400 transition-colors hover:border-accent/60">
         <p className="font-medium text-neutral-100">Get in touch</p>
         <p className="mt-2">
           {profile.location}

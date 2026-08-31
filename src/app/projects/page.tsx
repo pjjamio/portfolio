@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ProjectCard from "@/components/ProjectCard";
+import Reveal from "@/components/Reveal";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
@@ -15,12 +16,14 @@ export default function ProjectsPage() {
       </h1>
       <p className="mt-3 max-w-2xl text-neutral-400">
         Custom WordPress builds — Elementor and hand-coded themes with Advanced Custom Fields.
-        Every card links to the live site; previews are captured live, so give them a moment to load.
+        Every card links to the live site; previews are generated on the fly, so give them a moment to load.
       </p>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((p) => (
-          <ProjectCard key={p.url} project={p} />
+        {projects.map((p, i) => (
+          <Reveal key={p.url} delay={(i % 3) * 90} className="h-full">
+            <ProjectCard project={p} />
+          </Reveal>
         ))}
       </div>
     </section>

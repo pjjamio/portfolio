@@ -6,28 +6,31 @@ export default function Hero() {
   const [first, ...rest] = profile.name.split(" ");
   return (
     <section className="mx-auto flex max-w-5xl flex-col items-center px-6 py-24 text-center sm:py-32">
-      <Image
-        src="/paul-john-jamio.jpg"
-        alt={profile.name}
-        width={160}
-        height={160}
-        priority
-        className="mb-8 h-40 w-40 rounded-full border border-line object-cover object-top"
-      />
-      <h1 className="text-4xl font-bold tracking-tight text-neutral-100 sm:text-6xl">
+      <div className="mb-8 animate-float rounded-full p-1 ring-1 ring-line transition-shadow hover:shadow-[0_0_40px_-8px] hover:shadow-accent/40">
+        <Image
+          src="/paul-john-jamio.jpg"
+          alt={profile.name}
+          width={160}
+          height={160}
+          priority
+          className="h-40 w-40 rounded-full border border-line object-cover object-top"
+        />
+      </div>
+      <h1 className="animate-fade-up text-4xl font-bold tracking-tight text-neutral-100 sm:text-6xl">
         {first} <span className="text-accent">{rest.join(" ")}</span>
       </h1>
-      <p className="mt-4 text-lg text-neutral-400">
+      <p className="mt-4 animate-fade-up text-lg text-neutral-400" style={{ animationDelay: "80ms" }}>
         <span className="text-accent">&lt;/&gt;</span> {profile.role} <span className="text-accent">⚡</span>
       </p>
 
       <div className="mt-10">
         <p className="text-sm font-semibold uppercase tracking-widest text-neutral-500">Skills</p>
         <div className="mt-3 flex flex-wrap justify-center gap-2">
-          {skills.map((s) => (
+          {skills.map((s, i) => (
             <span
               key={s}
-              className="rounded-full bg-accent/90 px-3 py-1 text-xs font-medium text-ink"
+              style={{ animationDelay: `${i * 45}ms` }}
+              className="animate-fade-up rounded-full bg-accent/90 px-3 py-1 text-xs font-medium text-ink transition-transform hover:-translate-y-0.5 hover:bg-accent"
             >
               {s}
             </span>
@@ -38,19 +41,19 @@ export default function Hero() {
       <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-sm">
         <Link
           href="/projects"
-          className="rounded-full bg-accent px-5 py-2 font-medium text-ink transition-opacity hover:opacity-90"
+          className="rounded-full bg-accent px-5 py-2 font-medium text-ink transition-all hover:-translate-y-0.5 hover:opacity-90 hover:shadow-lg hover:shadow-accent/20"
         >
           View Projects
         </Link>
         <Link
           href="/contact"
-          className="rounded-full border border-line px-5 py-2 font-medium text-neutral-200 transition-colors hover:border-accent/60"
+          className="rounded-full border border-line px-5 py-2 font-medium text-neutral-200 transition-all hover:-translate-y-0.5 hover:border-accent/60"
         >
           Contact Me
         </Link>
         <a
           href="/resume.pdf"
-          className="rounded-full border border-line px-5 py-2 font-medium text-neutral-200 transition-colors hover:border-accent/60"
+          className="rounded-full border border-line px-5 py-2 font-medium text-neutral-200 transition-all hover:-translate-y-0.5 hover:border-accent/60"
         >
           Download Resume
         </a>

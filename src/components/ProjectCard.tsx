@@ -6,7 +6,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       href={project.url}
       target="_blank"
       rel="noreferrer"
-      className="group flex flex-col overflow-hidden rounded-xl border border-line bg-surface transition-colors hover:border-accent/60"
+      className="group flex h-full flex-col overflow-hidden rounded-xl border border-line bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/60 hover:shadow-xl hover:shadow-black/30"
     >
       <div className="aspect-[4/3] overflow-hidden border-b border-line bg-ink">
         {/* eslint-disable-next-line @next/next/no-img-element */}
