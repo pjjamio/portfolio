@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
-import { education, experience, profile, skills } from "@/data/resume";
+import { education, experience, profile, skills, specialties } from "@/data/resume";
 
 export const metadata: Metadata = {
   title: "About — Paul John Jamio",
@@ -33,6 +33,26 @@ export default function AboutPage() {
           </span>
         ))}
       </div>
+
+      <Reveal className="mt-16">
+      <h2 className="text-xl font-semibold text-neutral-100">Specialties</h2>
+      <div className="mt-6 space-y-8">
+        {specialties.map((sp) => (
+          <div
+            key={sp.title}
+            className="rounded-xl border border-line bg-surface p-6 transition-colors hover:border-accent/60"
+          >
+            <p className="font-medium text-neutral-100">{sp.title}</p>
+            <p className="mt-2 text-sm leading-relaxed text-neutral-400">{sp.summary}</p>
+            <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-neutral-400">
+              {sp.points.map((pt) => (
+                <li key={pt}>{pt}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      </Reveal>
 
       <Reveal className="mt-16">
       <h2 className="text-xl font-semibold text-neutral-100">Experience</h2>
