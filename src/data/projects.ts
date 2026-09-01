@@ -12,6 +12,13 @@ export function shot(url: string): string {
 
 export const projects: Project[] = [
   {
+    name: "Selby Apiaries",
+    url: "https://selbyapiaries.com/",
+    stack: ["WordPress", "Divi", "WooCommerce"],
+    description:
+      "Freelance build (Aug 2026) for a queen-bee breeding operation selling queens, package bees, and almond-pollination services across Utah and Wyoming.",
+  },
+  {
     name: "PathFactory",
     url: "https://www.pathfactory.com/",
     stack: ["WordPress", "Custom Theme", "ACF"],

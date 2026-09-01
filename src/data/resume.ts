@@ -18,6 +18,8 @@ export const skills = [
   "MySQL",
   "WordPress",
   "Elementor",
+  "Divi",
+  "WooCommerce",
   "Advanced Custom Fields",
   "UI / UX",
   "Frontend & Backend",
@@ -59,6 +61,19 @@ export type Job = {
 };
 
 export const experience: Job[] = [
+  {
+    company: "Freelance",
+    location: "Remote",
+    title: "WordPress Developer & GHL Specialist",
+    period: "Dec 2024 – Present",
+    points: [
+      "Design, build, and launch custom WordPress sites for clients using Divi, Elementor, and hand-coded themes with Advanced Custom Fields.",
+      "Built and manage selbyapiaries.com — a full Divi site with a WooCommerce shop for queen and package bee sales, seasonal availability, an almond-pollination section, the Selby Queening Protocol with QR traceability, and a “From the Apiary” blog.",
+      "Set up and optimize GoHighLevel accounts: workflows, sales pipelines, and marketing automations for agencies and small businesses.",
+      "Manage client CRM data, sales funnels, and email & SMS campaigns, and deliver performance reports and data analysis.",
+      "Provide ongoing content updates, plugin maintenance, and security for the sites and accounts I manage.",
+    ],
+  },
   {
     company: "Freedom Solutions",
     location: "Davao, PH",
